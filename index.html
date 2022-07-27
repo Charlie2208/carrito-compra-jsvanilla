@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compra JavaScript Vanilla</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="https://kit.fontawesome.com/85fecc585c.js" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/img/descarga.png" alt="" width="40" height="34" class="d-inline-block align-text-top">
+                Pasteleria
+            </a>
+
+            <div class="two columns u-pull-right">
+                <ul>
+                    <li class="submenu">
+                        <i class="fa-solid fa-cart-shopping fa-2x carrito" id="img-carrito"></i>
+                        <div id="carrito">
+                            <table id="lista-carrito" class="u-full-width">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+
+                            <a href="#" id="vaciar-carrito" class="btn u-full-width">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="contenido-hero">
+                        <h2 class="mt-5 mx-5 py-5 display-3 text-bg">Pasteleria</h1>
+                            <p class="mt-5 mx-5 display-5 text-bg">Revisa nuestra carta!</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 mx-auto">
+                    <i class="fa-solid fa-clock fa-2x"></i>
+                    <span class="mx-2">Tus pedidos a la hora</span>
+                </div>
+                <div class="col-12 col-md-4 mx-auto">
+                    <i class="fa-solid fa-calendar fa-2x mx-2"></i>
+                    <span>Reservas toda la semana</span>
+                </div>
+                <div class="col-12 col-md-4 mx-auto">
+                    <i class="fa-solid fa-check fa-2x mx-2"></i>
+                    <span>Solo productos frescos y seleccionados</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lista-pasteles" class="container">
+        <h1 class="text-center mt-2">Nuestros productos</h1>
+        <div class="row mt-5">
+            <div class="col-12 col-md-4 mx-auto">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="/assets/img/pexels-cottonbro-4686960.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Donas</h5>
+                      <p class="card-text">Deleciosas donas rellenas con chocolate, manjar, entre otros</p>
+                      <p class="precio">$2.000</p>
+                      <a href="#" class="btn btn-primary agregar-carrito" data-id="1">Agregar al carrito</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-12 col-md-4 mx-auto">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="/assets/img/torta.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Tortas</h5>
+                      <p class="card-text">Múltiples variedades de tortas a pedidos</p>
+                      <p class="precio">$18.000</p>
+                      <a href="#" class="btn btn-primary agregar-carrito" data-id="2">Agregar al carrito</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-12 col-md-4 mx-auto">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="/assets/img/cake yogurt.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pastel de yogurt</h5>
+                      <p class="card-text">Deliciosos pasteles de yogurt, en múltiples sabores</p>
+                      <p class="precio">$12.000</p>
+                      <a href="#" class="btn btn-primary agregar-carrito" data-id="3">Agregar al carrito</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-12 col-md-4 mx-auto mt-5 mb-5">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="/assets/img/galletitas.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Galletitas</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="precio">$2.000</p>
+                      <a href="#" class="btn btn-primary agregar-carrito" data-id="4">Agregar al carrito</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-12 col-md-4 mx-auto mt-5 mb-5">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="/assets/img/cake-frutos-rojos.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pie de frutos rojos</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="precio">$9.000</p>
+                      <a href="#" class="btn btn-primary agregar-carrito" data-id="5">Agregar al carrito</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-12 col-md-4 mx-auto mt-5  mb-5">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="/assets/img/brownie2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Brownie</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="precio">$5.000</p>
+                      <a href="#" class="btn btn-primary agregar-carrito" data-id="6">Agregar al carrito</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <h3 class="text-center">Síguenos en nuestras redes sociales</h3>
+    </footer>
+
+
+
+
+
+    <script src="/assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.hero {
+        background-image: url(../assets/img/pexels-igor-ovsyannykov-205961.jpg);
+        height: 400px;
+        background-size: cover;
+        opacity: 0.8;
+        color: #ffff;
+        
+}
+
+
+.barra {
+    padding: 20px 0;
+    background: #ff44b4; /* Old browsers */
+    background: -moz-linear-gradient(left, #8a2461 0%,#ff57a5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #8a2461 0%,#ff57a5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #8a2461 0%,#ff57a5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 );
+    color: #ffff;
+    
+}
+
+footer {
+    padding: 20px 0;
+    background: #ff44b4; /* Old browsers */
+    background: -moz-linear-gradient(left, #8a2461 0%,#ff57a5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #8a2461 0%,#ff57a5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #8a2461 0%,#ff57a5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 );
+    color: #ffff;
+}
